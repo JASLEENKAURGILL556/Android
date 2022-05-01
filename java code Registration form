@@ -1,0 +1,32 @@
+package com.example.glory;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+    public void InputBtn(View view){
+      //textview to make an variable of bvn
+      TextView name=findViewById(R.id.nameShowTxt);
+      TextView password= findViewById(R.id.passwordShowTxt);
+      TextView email= findViewById(R.id.emailShowTxt);
+      EditText username= findViewById(R.id.nameTxt);
+      EditText userpassword = findViewById(R.id.passwordTxt);
+      EditText useremail = findViewById(R.id.emailTxt);
+      name.setText(username.getText().toString());
+      password.setText(userpassword.getText().toString());
+      email.setText(useremail.getText().toString());
+}
+}
+// do add this line of code to button android:onClick="funcitonname" in button xml source code
